@@ -66,7 +66,7 @@ Where a paragraph needs to be read rather than scanned, keep it at body scale an
 
 **Spacing scale.** 0.25 / 0.5 / 0.75 / 1 / 1.5 / 2rem. Stay on it.
 
-**Motion.** State transitions 140 to 200ms. One orchestrated moment at most. Honour `prefers-reduced-motion`. No fade-and-slide on every section.
+**Motion.** State transitions 140 to 200ms. Sections and photo cards use a single shared `.reveal` pattern (soft fade + rise, 700ms, via IntersectionObserver in `main.js`) the first time they scroll into view, once each, never re-triggering. The venue-strip cards stagger slightly; the energy-band photo has a subtle scroll-linked parallax. Honour `prefers-reduced-motion`: both are fully disabled (CSS forces `.reveal` to its final state; the parallax listener never attaches).
 
 ## Page content
 

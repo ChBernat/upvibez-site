@@ -212,7 +212,11 @@ Bordered pills at meta size for room names, cache status, playback state. Carrie
 
 ## Motion
 
-State transitions 140 to 200ms. The schedule grid still draws itself in once on load. `prefers-reduced-motion` renders everything in its final state immediately.
+State transitions 140 to 200ms. The schedule grid still draws itself in once on load.
+
+**Scroll reveal.** A deliberate, later addition to this system: each section, and each photo card in the venue strip, carries a `.reveal` class — opacity 0 and translateY(28px) at rest, animating to its resting state the first time it scrolls into view (IntersectionObserver, 700ms, an easing curve with a soft overshoot-free deceleration). It fires once per element and never re-triggers on scroll back up. The venue-strip cards stagger by 120ms each, so they arrive as a small cascade rather than all at once. The energy-band photo has a subtle parallax, scaled slightly larger than its frame and nudged by scroll position, so it drifts rather than sitting static.
+
+This reveal is restrained on purpose: one movement per element, no bounce, no rotation, no staggering longer than three items. It should read as quality, not as a template effect. `prefers-reduced-motion` disables both the reveal (elements render in their final state immediately, no transition) and the parallax (the scroll listener never attaches) — this is non-negotiable, not a nice-to-have.
 
 ## Writing
 
