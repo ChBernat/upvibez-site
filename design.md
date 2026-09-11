@@ -1,6 +1,6 @@
 ---
 name: Archify Vibe
-description: Archify's precision loosened up with warmth, color, and real photography for a non-technical, venue-owner audience.
+description: Archify's precision loosened up with warmth, color, and elegant real photography for the non-technical leadership of hotel and restaurant groups.
 colors:
   canvas: "#050318"
   mask: "#0F0B2E"
@@ -107,9 +107,9 @@ components:
 
 ## Overview
 
-**Creative north star: this feels like a great night out, run by software that never misses a beat.**
+**Creative north star: this feels like a landmark hospitality group's own site, not a piece of scheduling software.**
 
-The original Archify was a control-panel aesthetic built for a partnerships manager reading a credibility page. That reader has changed: this page now talks to the person who actually owns or runs a hotel, restaurant, bar, or spa — someone who thinks in guests, moods, and busy Friday nights, not in schedules and compliance records. They are not impressed by an instrument panel. They are convinced by a photo of a room full of people having a good time, a headline that sounds like a person and not a spec sheet, and a product demo that's fun to poke at for ten seconds.
+The original Archify was a control-panel aesthetic built for a partnerships manager reading a credibility page. That reader has changed twice now: first to a single non-technical venue owner, then refined further to the non-technical leadership of a hotel or restaurant group running a portfolio of properties — someone who thinks in brand standards, guest experience, and consistency across locations, not in schedules and compliance records. They are not impressed by an instrument panel, and they are not won over by a casual, clubby tone either. They are convinced by imagery and language pitched at the same register as a groups like Four Seasons or Dubai Holding's hospitality arm use to describe themselves: elegant, confident, a little aspirational, never overselling. Think landmark properties, not a night out.
 
 So the page keeps its midnight canvas, its logo-derived palette, and its honest, no-invented-capability spine — but it now shows real venues and real guests, uses a warm display typeface instead of an all-mono voice, and lets color and photography carry energy instead of only meaning.
 
@@ -177,7 +177,7 @@ Same wordmark-derived palette as before. What changes is how liberally it's allo
 
 The single biggest change in this revision. Photos do the emotional work copy used to do alone.
 
-- **Subject.** Real-feeling moments inside the kind of venues UpVibez actually serves: a restaurant mid-service, friends laughing over dinner, a hotel lounge at golden hour, a spa, a dance floor. Warm, candid, a little imperfect — never a stiff corporate handshake photo, never an obviously staged stock-photo smile at the camera.
+- **Subject.** Elegant, well-composed moments inside the kind of properties UpVibez actually serves: a landmark restaurant dining room, a hotel lounge at golden hour, an elevated rooftop bar, a spa. Aspirational and polished, in the register of a hospitality group's own brand photography — never a casual snapshot, never a rowdy night-out or club scene, never an obviously staged stock-photo smile at the camera.
 - **Treatment.** Full color, no duotone or brand-color wash required. Corners match the panel or control radius depending on size. A photo used as a background behind text always carries a canvas-to-transparent scrim strong enough to hold body-size text at full contrast.
 - **Playlist covers.** Every playlist, album, or track shown anywhere in the product mock gets a real square photo standing in for its cover art, not an icon or a two-letter monogram. This is one of the most concrete ways the page shows the product is about real music in real rooms.
 - **Captions.** Meta type, dim color, brief. A caption names the place or moment, it doesn't sell it — the photo already did that.
@@ -216,19 +216,19 @@ State transitions 140 to 200ms. The schedule grid still draws itself in once on 
 
 ## Writing
 
-Sentence case. Active voice. No em dashes. Short sentences a general manager can read in ten seconds standing at a host stand.
+Sentence case. Active voice. No em dashes. No exclamation marks — the register here is composed, not excitable. Short sentences a non-technical group executive can read in ten seconds between meetings.
 
-Speak to the person running the venue, not the software running the schedule. "Set it up once, and the right music plays itself, every room, every day" beats a sentence about blocks and slots. Save the mechanism-level detail (minute-level scheduling, offline caching) for the one section that has to prove it works, and keep it plain and honest there too.
+Speak to the person who owns or runs the group, not the software running the schedule, and write at the scale they operate at: properties and a portfolio, not one room. "Set it up once, and the right atmosphere plays itself, in every room, across every property" beats a sentence about blocks and slots. Save the mechanism-level detail (minute-level scheduling, offline caching) for the one section that has to prove it works, and keep it plain and honest there too.
 
-Use the venue's vocabulary: venue, room, playlist, guest, shift, day. Avoid platform, solution, seamless, elevate, curate as a verb applied to us, and avoid partner-facing jargon like "licensing enquiry" in favor of "get in touch."
+Use the vocabulary of a hospitality group describing itself: property, portfolio, room, guest, standard. "Venue" still appears where it reads naturally, but "property" and "portfolio" are what signal scale. Avoid platform, solution, seamless, elevate, curate as a verb applied to us, and avoid anything that reads as slang or overly casual ("zero babysitting," "walk away") — say the same thing plainly and with more polish instead.
 
-Exclamation marks are allowed in small doses where the energy is genuine. Don't invent product capability in copy — a friendlier voice is not a license to promise something the product doesn't do.
+Don't invent product capability in copy — a more polished voice is not a license to promise something the product doesn't do.
 
 ## Do and don't
 
 ### Do
 
-- Open with a photo that makes someone smile before they've read a word.
+- Open with a photo that reads as a landmark property, before they've read a word.
 - Give every playlist a real photo cover, everywhere it appears.
 - Keep the schedule grid as proof, once the reader is already interested.
 - Hold prose to 68 characters and body size or larger.
@@ -237,7 +237,7 @@ Exclamation marks are allowed in small doses where the energy is genuine. Don't 
 
 ### Don't
 
-- Don't use a stiff, obviously-staged stock photo. If it looks like a handshake photo from a bank's homepage, pick a different one.
+- Don't use a stiff, obviously-staged stock photo, and don't use a casual nightlife or club shot either. If it wouldn't sit comfortably on a hospitality group's own investor site, pick a different one.
 - Don't put more than two saturated UI colors in one viewport, on top of whatever a photo brings in naturally.
 - Don't add a tracked-out uppercase eyebrow above every heading.
 - Don't recreate the wordmark's gradient as decoration; scrims over photos are the only other sanctioned gradient.
