@@ -1,4 +1,16 @@
 (function () {
+  var COVER_PATH = 'assets/photos/';
+
+  var TRACK_PHOTOS = {
+    'Lounge mix': 'cover-lounge-mix.jpg',
+    'Dinner set': 'cover-dinner-set.jpg',
+    'Golden hour': 'cover-golden-hour.jpg',
+    'Quiet mornings': 'cover-quiet-mornings.jpg',
+    'Morning lounge': 'cover-morning-lounge.jpg',
+    'Nightfall': 'cover-nightfall.jpg',
+    'Late night': 'cover-late-night.jpg'
+  };
+
   var VENUES = [
     {
       name: 'Grand Hotel',
@@ -8,9 +20,9 @@
           devices: ['Desktop, front desk'],
           cached: 7,
           blocks: [
-            { start: 6, end: 11, state: 'scheduled', title: 'Lounge mix', type: 'Playlist', art: 'LM' },
+            { start: 6, end: 11, state: 'scheduled', title: 'Lounge mix', type: 'Playlist', art: TRACK_PHOTOS['Lounge mix'] },
             { start: 11, end: 11.5, state: 'silent' },
-            { start: 11.5, end: 22, state: 'scheduled', title: 'Dinner set', type: 'Album', art: 'DS' },
+            { start: 11.5, end: 22, state: 'scheduled', title: 'Dinner set', type: 'Album', art: TRACK_PHOTOS['Dinner set'] },
             { start: 22, end: 24, state: 'silent' }
           ]
         },
@@ -20,7 +32,7 @@
           cached: 7,
           blocks: [
             { start: 6, end: 7, state: 'silent' },
-            { start: 7, end: 23, state: 'scheduled', title: 'Golden hour', type: 'Playlist', art: 'GH' },
+            { start: 7, end: 23, state: 'scheduled', title: 'Golden hour', type: 'Playlist', art: TRACK_PHOTOS['Golden hour'] },
             { start: 23, end: 24, state: 'silent' }
           ]
         },
@@ -29,7 +41,7 @@
           devices: ['Tablet, reception'],
           cached: 5,
           blocks: [
-            { start: 6, end: 14, state: 'scheduled', title: 'Quiet mornings', type: 'Playlist', art: 'QM' },
+            { start: 6, end: 14, state: 'scheduled', title: 'Quiet mornings', type: 'Playlist', art: TRACK_PHOTOS['Quiet mornings'] },
             { start: 14, end: 24, state: 'silent' }
           ]
         }
@@ -43,9 +55,9 @@
           devices: ['Desktop, front desk'],
           cached: 6,
           blocks: [
-            { start: 6, end: 9, state: 'scheduled', title: 'Morning lounge', type: 'Playlist', art: 'ML' },
+            { start: 6, end: 9, state: 'scheduled', title: 'Morning lounge', type: 'Playlist', art: TRACK_PHOTOS['Morning lounge'] },
             { start: 9, end: 17, state: 'silent' },
-            { start: 17, end: 24, state: 'scheduled', title: 'Nightfall', type: 'Track', art: 'NF' }
+            { start: 17, end: 24, state: 'scheduled', title: 'Nightfall', type: 'Track', art: TRACK_PHOTOS['Nightfall'] }
           ]
         },
         {
@@ -54,7 +66,7 @@
           cached: 4,
           blocks: [
             { start: 6, end: 16, state: 'silent' },
-            { start: 16, end: 24, state: 'scheduled', title: 'Late night', type: 'Album', art: 'LN' }
+            { start: 16, end: 24, state: 'scheduled', title: 'Late night', type: 'Album', art: TRACK_PHOTOS['Late night'] }
           ]
         }
       ]
@@ -114,7 +126,7 @@
     var detail = document.getElementById('scheduler-detail');
     if (b.state === 'scheduled') {
       detail.innerHTML =
-        '<span class="cover-tile" aria-hidden="true">' + b.art + '</span>' +
+        '<img class="cover-tile" src="' + COVER_PATH + b.art + '" alt="">' +
         '<div>' +
         '<p class="meta dim">' + b.type + '</p>' +
         '<p class="block-detail__title">' + b.title + '</p>' +
@@ -142,8 +154,11 @@
     if (!body) return;
     body.innerHTML = room.blocks.map(function (b) {
       var plays = b.state === 'silent'
-        ? '<span class="schedule-table__title">Silent</span>'
-        : '<span class="schedule-table__title">' + b.title + '</span><span class="schedule-table__type">' + b.type + '</span>';
+        ? '<div class="schedule-table__plays"><span class="schedule-table__title">Silent</span></div>'
+        : '<div class="schedule-table__plays">' +
+          '<img class="schedule-table__thumb" src="' + COVER_PATH + b.art + '" alt="">' +
+          '<span><span class="schedule-table__title">' + b.title + '</span><span class="schedule-table__type">' + b.type + '</span></span>' +
+          '</div>';
       return '<tr>' +
         '<td>' + hourLabel(b.start) + '–' + hourLabel(b.end) + '</td>' +
         '<td>' + plays + '</td>' +
@@ -253,12 +268,6 @@
     return Number(parts[0]) + Number(parts[1]) / 60;
   }
 
-  function trackInitials(name) {
-    var words = name.split(' ').filter(Boolean);
-    if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
-    return (words[0][0] + words[1][0]).toUpperCase();
-  }
-
   function insertBlock(blocks, newBlock) {
     var result = [];
     blocks.forEach(function (b) {
@@ -333,7 +342,7 @@
       }
 
       var room = VENUES[schedulerState.venue].rooms[schedulerState.room];
-      var newBlock = { start: startHour, end: endHour, state: 'scheduled', title: track, type: 'Playlist', art: trackInitials(track) };
+      var newBlock = { start: startHour, end: endHour, state: 'scheduled', title: track, type: 'Playlist', art: TRACK_PHOTOS[track] };
       room.blocks = insertBlock(room.blocks, newBlock);
       schedulerState.block = room.blocks.indexOf(newBlock);
       renderScheduler();
@@ -365,7 +374,7 @@
     if (isPlaying) {
       html +=
         '<div class="block-detail">' +
-        '<span class="cover-tile" aria-hidden="true">' + b.art + '</span>' +
+        '<img class="cover-tile" src="' + COVER_PATH + b.art + '" alt="">' +
         '<div>' +
         '<p class="meta dim">Now playing</p>' +
         '<p class="player-mock__playlist">' + b.title + '</p>' +

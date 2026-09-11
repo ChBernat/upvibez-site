@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UpVibez — scheduled, licensed music for venues</title>
-  <meta name="description" content="UpVibez schedules music to the minute, months ahead, room by room, and keeps a licensed, logged record of what played where.">
+  <title>UpVibez — the vibe, on autopilot</title>
+  <meta name="description" content="UpVibez schedules the right music for every room of your venue, weeks ahead, and keeps it playing even when the internet doesn't cooperate.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,53 +25,44 @@
 
   <main id="top">
     <section class="hero" id="hero">
-      <h1 class="display">Schedule music to the minute, months ahead, venue by venue, room by room.</h1>
-      <p class="lede">Every venue in the group schedules on its own, room by room, set weeks in advance, and keeps playing if the network drops.</p>
-
-      <div class="panel schedule-panel" role="img" aria-label="Schedule for three rooms across a day. Lobby plays from 06:00 to 22:00 with a short gap at 11:00. Restaurant plays from 07:00 to 23:00. Spa plays from 06:00 to 14:00. The current time, 14:00, is marked on the timeline.">
-        <span class="state-chip chip-playing schedule-panel__now-chip">now</span>
-        <svg class="schedule-grid" viewBox="0 0 880 168" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
-          <line class="grid-tick" x1="110" y1="20" x2="110" y2="156"></line>
-          <line class="grid-tick" x1="230" y1="20" x2="230" y2="156"></line>
-          <line class="grid-tick" x1="350" y1="20" x2="350" y2="156"></line>
-          <line class="grid-tick" x1="470" y1="20" x2="470" y2="156"></line>
-          <line class="grid-tick" x1="590" y1="20" x2="590" y2="156"></line>
-          <line class="grid-tick" x1="710" y1="20" x2="710" y2="156"></line>
-          <line class="grid-tick" x1="830" y1="20" x2="830" y2="156"></line>
-
-          <text class="grid-hour" x="110" y="13">06</text>
-          <text class="grid-hour" x="230" y="13">09</text>
-          <text class="grid-hour" x="350" y="13">12</text>
-          <text class="grid-hour" x="470" y="13">15</text>
-          <text class="grid-hour" x="590" y="13">18</text>
-          <text class="grid-hour" x="710" y="13">21</text>
-          <text class="grid-hour" x="830" y="13">24</text>
-
-          <text class="grid-room" x="0" y="44">Lobby</text>
-          <text class="grid-room" x="0" y="92">Restaurant</text>
-          <text class="grid-room" x="0" y="140">Spa</text>
-
-          <rect class="block block-scheduled" style="--d:0"  x="110" y="24" width="200" height="32" rx="3"></rect>
-          <rect class="block block-silent"    style="--d:1"  x="310" y="24" width="20"  height="32" rx="3"></rect>
-          <rect class="block block-scheduled" style="--d:2"  x="330" y="24" width="420" height="32" rx="3"></rect>
-          <rect class="block block-silent"    style="--d:3"  x="750" y="24" width="80"  height="32" rx="3"></rect>
-
-          <rect class="block block-silent"    style="--d:1"  x="110" y="72" width="40"  height="32" rx="3"></rect>
-          <rect class="block block-scheduled" style="--d:2"  x="150" y="72" width="640" height="32" rx="3"></rect>
-          <rect class="block block-silent"    style="--d:4"  x="790" y="72" width="40"  height="32" rx="3"></rect>
-
-          <rect class="block block-scheduled" style="--d:0"  x="110" y="120" width="320" height="32" rx="3"></rect>
-          <rect class="block block-silent"    style="--d:2"  x="430" y="120" width="400" height="32" rx="3"></rect>
-
-          <line class="now-line" x1="430" y1="16" x2="430" y2="160"></line>
-        </svg>
+      <div class="hero__copy">
+        <h1 class="display">Set the vibe. Every room, every night, on autopilot.</h1>
+        <p class="lede">UpVibez schedules your music weeks ahead, so the right sound is always playing, whether you're on the floor or at home asleep.</p>
+        <a class="quiet-action" href="#scheduling">See it in action</a>
       </div>
+      <figure class="hero__photo photo-card">
+        <img src="assets/photos/hero-restaurant.jpg" alt="Friends laughing together at a restaurant table, lit by warm evening light.">
+        <figcaption class="meta dim">Friday night. Nobody touched the playlist.</figcaption>
+      </figure>
     </section>
+
+    <div class="energy-band">
+      <img src="assets/photos/energy-dancefloor.jpg" alt="A crowded dance floor lit in red, guests moving to the music.">
+      <p class="energy-band__line">Great music, every night. Zero babysitting.</p>
+    </div>
+
+    <div class="venue-strip">
+      <p class="meta dim venue-strip__label">Built for every kind of venue</p>
+      <div class="venue-strip__grid">
+        <figure class="photo-card venue-strip__card">
+          <img src="assets/photos/venue-restaurant.jpg" alt="A restaurant table set with food, warmly lit for dinner service.">
+          <figcaption class="meta dim">Restaurants</figcaption>
+        </figure>
+        <figure class="photo-card venue-strip__card">
+          <img src="assets/photos/venue-hotel.jpg" alt="A warmly lit hotel lobby lounge in the evening.">
+          <figcaption class="meta dim">Hotels</figcaption>
+        </figure>
+        <figure class="photo-card venue-strip__card">
+          <img src="assets/photos/venue-spa.jpg" alt="Candles and soft light in a spa setting.">
+          <figcaption class="meta dim">Spas</figcaption>
+        </figure>
+      </div>
+    </div>
 
     <section class="section" id="scheduling">
       <h2 class="section-heading">Scheduling</h2>
-      <p class="lede">Build a schedule down to the minute, for as many months ahead as you want.</p>
-      <p class="body">Set start and end times for each block and assign what plays: a playlist, a full album, or a single track scheduled on its own. Repeat a block across days or carve out an exception for a holiday. Every venue in the group schedules independently, and every room within a venue does too, so the lobby can run a lounge playlist through breakfast while the restaurant runs something else. A venue that has not split into rooms yet gets one schedule, the venue default, and can add rooms whenever it is ready.</p>
+      <p class="lede">Pick the playlist, pick the hours, and walk away.</p>
+      <p class="body">Set up a whole month in one sitting: a lounge playlist for the lobby at breakfast, dinner music in the restaurant, something quieter in the spa. Every room can run its own thing, and every venue in your group can too. Try it below, pick a room and add a block yourself.</p>
 
       <div class="device-frame app-mock app-mock--scheduler" aria-label="Interactive schedule preview. Choose a venue and a room, then select a block to see what plays.">
         <div class="device-frame__bar">
@@ -176,8 +167,8 @@
 
     <section class="section" id="playback">
       <h2 class="section-heading">Playback</h2>
-      <p class="lede">Play the schedule on any device, in any room, across every venue in the group.</p>
-      <p class="body">Install the player on as many desktop and tablet devices as a venue needs, one per room or more where a room needs backup coverage, with output routed through the venue's own volume control into the house sound system. Each device keeps its own room's schedule and caches a week of music, so playback stays right if the connection drops and syncs the moment it is back. Every venue and every room reports the same way, so an operations lead can check any of them from one place.</p>
+      <p class="lede">It plays itself, everywhere, even if the internet doesn't cooperate.</p>
+      <p class="body">Every room gets its own device, connected to whatever speakers you already have. A week of music is always downloaded ahead of time, so a dropped connection never means dead air. Add as many devices, rooms, and venues as you need. Try switching rooms below.</p>
 
       <div class="device-frame app-mock app-mock--player" aria-label="Interactive player preview. Choose a venue and a room to see what is playing.">
         <div class="device-frame__bar">
@@ -198,8 +189,8 @@
 
     <section class="section" id="compliance">
       <h2 class="section-heading">Compliance</h2>
-      <p class="lede">Every track is licensed, and every play is logged, room by room.</p>
-      <p class="body">Music entering a schedule is cleared for commercial use before it plays. Playback is logged automatically as it happens, so a venue's play history can be produced on demand: the room, the time, and confirmation that the track was licensed. That record is what a licensing partner needs to verify use, and what an operations team needs to show a rights holder, for any venue in the group.</p>
+      <p class="lede">Every track is licensed. Every play is on record.</p>
+      <p class="body">Every track that goes into a schedule is cleared for commercial use first. Once it plays, it's logged automatically: the room, the time, and confirmation it was licensed. If a rights holder or a partner ever asks what played where, you'll have the answer in seconds, for any venue in your group.</p>
       <div class="panel log-panel">
         <div class="log-panel__row">
           <span class="meta dim log-panel__time">14:02</span>
@@ -221,8 +212,8 @@
 
     <section class="section" id="waitlist">
       <h2 class="section-heading">Waitlist</h2>
-      <p class="lede">Running a venue and want early access? Get on the list.</p>
-      <p class="body">UpVibez reaches venues through licensing and distribution partners. Join the waitlist and we will let you know when it is available through a partner in your market.</p>
+      <p class="lede">Not ready to talk yet? Get on the list.</p>
+      <p class="body">We're bringing UpVibez to venues through a small number of partners. Join the waitlist and we'll reach out the moment it's available where you are.</p>
       <form class="waitlist-form" action="https://formspree.io/f/your-form-id" method="POST">
         <label class="visually-hidden" for="waitlist-email">Email address</label>
         <input class="waitlist-form__input" type="email" id="waitlist-email" name="email" placeholder="you@venue.com" required>
@@ -232,14 +223,14 @@
 
     <section class="section" id="contact">
       <h2 class="section-heading">Contact</h2>
-      <p class="lede">Tell us what you need to bring UpVibez to your venues.</p>
-      <p class="body">We work with distribution and licensing partners to bring scheduled, licensed playback to hotel and restaurant groups. Get in touch and we will walk you through the schedule, the player, and the compliance record together.</p>
+      <p class="lede">Ready to talk? We'd love to hear from you.</p>
+      <p class="body">Tell us about your venues and we'll walk you through exactly how scheduling, playback, and licensing work together, no jargon required.</p>
       <a class="primary-action" href="mailto:partners@upvibez.com">Email partners@upvibez.com</a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p class="meta dim">UpVibez. Scheduled, licensed music for venues.</p>
+    <p class="meta dim">UpVibez. Great music, every room, on autopilot.</p>
   </footer>
 
   <script src="main.js" defer></script>

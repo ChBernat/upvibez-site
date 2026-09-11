@@ -8,7 +8,7 @@ The UpVibez marketing landing page. One page, static, hosted on AWS Amplify.
 
 UpVibez is music scheduling software for hotel and restaurant groups. Venues schedule music weeks or months ahead, down to the minute, per room, and the player keeps running offline. Billing is a monthly fee per venue.
 
-**Purpose of this site right now:** it is the credibility surface we point licensing and distribution partners at, Soundtrack first. It is not a signup funnel. Assume the reader is a partnerships manager or a chain operations lead, not a consumer. Do not add pricing, a product tour, or a free trial unless asked.
+**Purpose of this site right now:** it convinces a venue owner or manager — hotel, restaurant, bar, spa — that UpVibez is worth a look. Assume the reader is not technical and is busy: a general manager, not an engineer or a partnerships contact. It leans on photography and energy more than on mechanism. It still isn't a hard signup funnel; the waitlist is the low-commitment ask, and pricing/a free trial stay off the page unless asked for.
 
 ## Stack
 
@@ -46,21 +46,23 @@ frontend:
 
 Local preview: `python3 -m http.server 8080`.
 
-## Design system: Archify
+## Design system: Archify Vibe
 
-The full system is in `design.md` and it is authoritative. Read it before touching visual code. Summary of what binds:
+The full system is in `design.md` and it is authoritative. Read it before touching visual code. It supersedes the original all-mono, one-accent Archify Web system — that version was built for a technical partnerships reader; this one is for a non-technical venue owner. Summary of what binds now:
 
 **Colors.** Dark first, palette drawn from the UpVibez wordmark. Canvas `#050318`, panels `#0F0B2E`, borders `#241C4D`. Text ladder: `#FFFFFF` ink, `#A79BD1` muted, `#59508C` dim.
 
-Saturated color is semantic, never decorative. On this page the only ones that should appear are violet `#7C3AED` for the primary path and focus, blue `#2F8FF0` for live or confirmed state, magenta `#E06FC4` for stored or persisted things, cyan `#3FC6E8` for licensing and compliance. If a color is not carrying meaning, do not use it.
+Saturated UI color (chips, blocks, buttons, focus rings) is still semantic: violet `#7C3AED` primary/focus, blue `#2F8FF0` live/confirmed, magenta `#E06FC4` stored/persisted, cyan `#3FC6E8` licensing/compliance. Up to two of these per viewport is fine now (was one). Photography's natural color doesn't count against that budget at all.
 
-**Type.** JetBrains Mono everywhere, with system mono fallbacks. One family only. Headline 1.5rem/700, title 0.875rem/600, body 0.75rem/400, label 0.625rem/700 uppercase with 0.12em tracking.
+**Type.** Two families. Poppins for anything read as a sentence — headlines, body, buttons. JetBrains Mono for anything read as data — timestamps, room/venue labels, state chips. Display `clamp(2.5rem,6vw,4.25rem)/700`, section `1.75rem/700`, lede `1.1875rem/500`, body `1rem/400`, meta `0.75rem/700` uppercase mono.
 
-Body at 0.75rem is tight for marketing prose. Where a paragraph needs to be read rather than scanned, promote it to body scale at a comfortable size and keep the line length under 80 characters. The Legibility Floor rule applies: label size is for metadata, not sentences.
+Where a paragraph needs to be read rather than scanned, keep it at body scale and under about 68 characters per line. The Legibility Floor rule still applies: meta size is for metadata, not sentences.
 
-**Surfaces.** Flat at rest. Border and tone carry structure. Shadows only for floating panels or active focus, using the vocabulary in `design.md`. No gradients, no glass, no glow as decoration, except the wordmark itself, which keeps its own native gradient as a fixed brand asset and is never recreated in CSS.
+**Photography.** Real, candid-feeling photos of venues and guests, not staged corporate stock. Every playlist/album/track shown in the product mock gets a real square photo standing in for cover art. A photo behind text always carries a canvas-to-transparent scrim for legibility.
 
-**Corners.** `0.2rem` precise, `0.5rem` controls, `1rem` panels, `999px` pills.
+**Surfaces.** Flat at rest. Border and tone carry structure. No gradients, no glass, no glow as decoration, except the wordmark's own gradient (fixed asset, never recreated) and a legibility scrim over a photo.
+
+**Corners.** `0.2rem` precise, `0.75rem` controls, `1.25rem` panels, `999px` pills.
 
 **Spacing scale.** 0.25 / 0.5 / 0.75 / 1 / 1.5 / 2rem. Stay on it.
 
@@ -70,24 +72,25 @@ Body at 0.75rem is tight for marketing prose. Where a paragraph needs to be read
 
 Sections, in order. Keep it to this unless asked.
 
-1. **Hero.** What UpVibez does, in one line a chain operator would recognise. The most characteristic thing about the product is the schedule itself, so the hero should show a schedule rather than describe one.
-2. **Scheduling.** Minute level, months ahead, per room, with a venue default when no rooms are defined.
-3. **Playback.** Desktop and tablet apps, external volume control, per room output, one week of music cached and looping when the connection drops.
-4. **Compliance.** Licensed playback and a record of what played where. This is the section partners care about most.
-5. **Contact.** One clear action for partnership enquiries.
+1. **Hero.** A photo that makes a venue owner feel the vibe, paired with a short, warm headline. The schedule mechanism is proven later, not up front.
+2. **Scheduling.** How easy it is to set up, in plain language, with the live scheduler mock as proof for anyone who wants to poke at it.
+3. **Playback.** Multiple devices, rooms, and venues, framed as "it just runs," not as an infrastructure claim.
+4. **Compliance.** Licensed playback and a record of what played where. Kept honest and plain even though the tone elsewhere is warmer.
+5. **Waitlist.** For venues that want early access, separate from the main contact ask.
+6. **Contact.** One clear action to start a conversation.
 
 ## Writing
 
-Sentence case throughout. Active voice. Plain verbs. No em dashes.
+Sentence case throughout. Active voice. Short sentences a busy general manager can read in ten seconds. No em dashes.
 
-Say what the product does, do not sell it. "Schedule music to the minute, months ahead" beats "revolutionise your venue's sonic identity". Name things the way a venue manager would.
+Speak to the person who runs the venue, not the schedule engine underneath it. Save mechanism-level detail (minute-level scheduling, offline caching) for Scheduling/Playback/Compliance, and keep it plain and honest there too — a warmer voice is not a license to invent a capability the product doesn't have. Exclamation marks are fine in small doses where the energy is real; don't force one onto every line.
 
-Avoid the generated-page tells: all caps eyebrow labels above headings, one word in a headline picked out in an accent color, meta strings joined with middle dots, arrows appended to button text, numbered markers on content that is not a sequence.
+Avoid the generated-page tells: all caps eyebrow labels above headings, meta strings joined with middle dots, arrows appended to button text, numbered markers on content that is not a sequence.
 
 ## Quality floor
 
-Responsive to mobile. Visible keyboard focus, cyan ring, 2px, 2px offset. Reduced motion respected. Semantic HTML. Contrast checked against the dark canvas. No decorative divs.
+Responsive to mobile. Visible keyboard focus, violet ring, 2px, 2px offset. Reduced motion respected. Semantic HTML. Contrast checked against the dark canvas, and against any scrim over a photo. Every stock photo used should look like a real moment, not a staged corporate handshake shot.
 
 ## Before you finish
 
-Read the page as a partnerships manager at a licensing company. If nothing on it tells them what we would need from them and what we bring, the page has not done its job yet.
+Read the page as a venue owner with no technical background, skimming it on a phone between tasks. If it doesn't make them smile within a few seconds and feel like the product would just work without them thinking about it, the page hasn't done its job yet.

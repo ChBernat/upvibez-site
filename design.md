@@ -1,6 +1,6 @@
 ---
-name: Archify Web
-description: Archify adapted from diagram instrument to a single marketing page for UpVibez.
+name: Archify Vibe
+description: Archify's precision loosened up with warmth, color, and real photography for a non-technical, venue-owner audience.
 colors:
   canvas: "#050318"
   mask: "#0F0B2E"
@@ -15,26 +15,26 @@ colors:
   silent: "#59508C"
 typography:
   display:
-    fontFamily: "JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-    fontSize: "clamp(2rem, 5vw, 3.25rem)"
+    fontFamily: "Poppins, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.5rem, 6vw, 4.25rem)"
     fontWeight: 700
-    lineHeight: 1.08
-    letterSpacing: "-0.03em"
+    lineHeight: 1.05
+    letterSpacing: "-0.02em"
   section:
-    fontFamily: "JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-    fontSize: "1.375rem"
-    fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: "-0.015em"
+    fontFamily: "Poppins, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.75rem"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "-0.01em"
   lede:
-    fontFamily: "JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-    fontSize: "1.0625rem"
-    fontWeight: 400
-    lineHeight: 1.6
-    letterSpacing: "-0.005em"
+    fontFamily: "Poppins, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.1875rem"
+    fontWeight: 500
+    lineHeight: 1.55
+    letterSpacing: "normal"
   body:
-    fontFamily: "JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-    fontSize: "0.9375rem"
+    fontFamily: "Poppins, ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.7
     letterSpacing: "normal"
@@ -43,11 +43,11 @@ typography:
     fontSize: "0.75rem"
     fontWeight: 700
     lineHeight: 1.35
-    letterSpacing: "0.1em"
+    letterSpacing: "0.08em"
 rounded:
   precise: "0.2rem"
-  control: "0.5rem"
-  panel: "1rem"
+  control: "0.75rem"
+  panel: "1.25rem"
   pill: "999px"
 spacing:
   xs: "0.25rem"
@@ -58,31 +58,36 @@ spacing:
   section: "6rem"
   page: "2rem"
 layout:
-  measure: "62ch"
+  measure: "68ch"
   column: "1120px"
   gutter: "clamp(1.5rem, 5vw, 4rem)"
 components:
   primary-action:
     backgroundColor: "{colors.scheduled}"
-    textColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.control}"
-    padding: "0.75rem 1.25rem"
-    height: "2.75rem"
+    padding: "0.875rem 1.5rem"
+    height: "3rem"
   quiet-action:
     backgroundColor: "transparent"
     borderColor: "{colors.border}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.control}"
-    padding: "0.75rem 1.25rem"
-    height: "2.75rem"
+    padding: "0.875rem 1.5rem"
+    height: "3rem"
   panel:
     backgroundColor: "{colors.mask}"
     borderColor: "{colors.border}"
     textColor: "{colors.ink}"
     rounded: "{rounded.panel}"
     padding: "1.5rem"
+  photo-card:
+    rounded: "{rounded.panel}"
+    borderColor: "{colors.border}"
+    overlayFrom: "rgba(5,3,24,0.85)"
+    overlayTo: "rgba(5,3,24,0)"
   schedule-block:
     backgroundColor: "{colors.mask}"
     borderColor: "{colors.border}"
@@ -98,31 +103,32 @@ components:
     padding: "0.25rem 0.625rem"
 ---
 
-# Design System: Archify Web
+# Design System: Archify Vibe
 
 ## Overview
 
-**Creative north star: the schedule is the hero.**
+**Creative north star: this feels like a great night out, run by software that never misses a beat.**
 
-Archify was built as an instrument for reading architecture diagrams. This adaptation keeps its discipline, its midnight canvas, and its single mono voice, and points them at one job: convincing a partnerships manager or a chain operations lead, in under a minute, that UpVibez is a serious piece of infrastructure.
+The original Archify was a control-panel aesthetic built for a partnerships manager reading a credibility page. That reader has changed: this page now talks to the person who actually owns or runs a hotel, restaurant, bar, or spa — someone who thinks in guests, moods, and busy Friday nights, not in schedules and compliance records. They are not impressed by an instrument panel. They are convinced by a photo of a room full of people having a good time, a headline that sounds like a person and not a spec sheet, and a product demo that's fun to poke at for ten seconds.
 
-The page stays dark, flat, and precise, because the product it describes is scheduling software that runs unattended in hundreds of venues. It should feel closer to a control surface than to a SaaS brochure. The one thing a visitor should remember is a timeline of music blocks laid out across a day, with rooms stacked underneath it.
+So the page keeps its midnight canvas, its logo-derived palette, and its honest, no-invented-capability spine — but it now shows real venues and real guests, uses a warm display typeface instead of an all-mono voice, and lets color and photography carry energy instead of only meaning.
 
-**What changes from Archify:**
+**What changes from the original Archify Web:**
 
-- Type scales up. Diagram metadata sizes are unreadable as prose, so the ladder is rebuilt for a page that people read rather than scan.
-- The semantic palette is re-mapped from diagram node categories to product states. The colors and their scarcity are unchanged; what they mean is.
-- Scroll and section rhythm replace the toolbar and canvas chrome.
-- Color still never decorates. On a marketing page this is the discipline that keeps it from turning into a gradient deck. The one exception is the wordmark itself, which keeps its own native gradient as a brand mark — nowhere else on the page uses one.
+- A second typeface arrives. Poppins carries headlines, body copy, and buttons — warm, rounded, easy to read at a glance. JetBrains Mono is demoted to what it's genuinely good at: timestamps, room labels, state chips, the schedule grid. It's now a supporting accent, not the whole voice.
+- Photography becomes a first-class material. Real, candid-feeling photos of venues and guests carry the emotional weight the copy used to carry alone.
+- Color loosens. The four signal colors still mean what they meant, but the strict "one accent per viewport" rule is relaxed to two, and photography is not counted against that budget at all — a photo is not a decorative color choice.
+- The schedule grid is no longer the only visually ambitious thing on the page. It shares that role with the hero photo and the energy section. It is still the proof the product works; it is no longer the only reason to keep scrolling.
+- Copy gets shorter, plainer, and warmer. Sentences a busy general manager can read in the ten seconds between tasks. Exclamation marks are allowed now, in small doses, where the energy is real.
 
 ## Colors
 
-The palette is drawn from the UpVibez wordmark: a deep indigo canvas, four signals lifted from the mark's own blue-to-violet-to-magenta run, and a lavender-tinted text ladder. Nothing else.
+Same wordmark-derived palette as before. What changes is how liberally it's allowed to appear.
 
 ### Surfaces
 
 - **Canvas** `#050318`, the page.
-- **Mask** `#0F0B2E`, panels, the schedule grid, cards.
+- **Mask** `#0F0B2E`, panels, cards, the schedule grid.
 - **Border** `#241C4D`, every hairline. One pixel, always.
 
 ### Text
@@ -133,125 +139,107 @@ The palette is drawn from the UpVibez wordmark: a deep indigo canvas, four signa
 
 ### Semantic signals
 
-Each one maps to a product state and appears only where that state is being shown.
-
-- **Scheduled** `#7C3AED`. The primary path: a programmed block, the main action, focus rings, links. This is the wordmark's own dominant violet. Its scarcity is what creates hierarchy, so if it is on more than a fifth of the page it is being used as decoration.
-- **Playing** `#2F8FF0`. Live state, confirmation, the offline cache holding. The wordmark's top-of-mark blue.
-- **Cached** `#E06FC4`. Stored and persisted things: the week of downloaded audio, playback history, the record of what played where. The wordmark's magenta.
-- **Licensed** `#3FC6E8`. Rights and compliance. This is the section partners read first, and this cyan is the only place it appears. The wordmark's lightest, coolest blue.
-- **Silent** `#59508C`. An unprogrammed slot. Not a color so much as an absence, and worth showing, because empty slots are what the product exists to fill.
+- **Scheduled** `#7C3AED`. The primary path: the main action, focus rings, links, a programmed block.
+- **Playing** `#2F8FF0`. Live state, confirmation.
+- **Cached** `#E06FC4`. Stored and persisted things.
+- **Licensed** `#3FC6E8`. Rights and compliance.
+- **Silent** `#59508C`. An unprogrammed slot. Still not really a color — an absence.
 
 ### Named rules
 
-**The semantic color rule.** A saturated color states that something is scheduled, playing, cached, or licensed. If it is not saying one of those four things, it does not appear.
+**The semantic color rule, loosened.** A saturated color still states one of the four product states when it appears on UI chrome (chips, blocks, buttons, focus rings). That rule is unchanged. What's gone is the ban on any other color anywhere: photography brings its own natural color into the page, and that's welcome.
 
-**The one accent per section rule.** A section carries at most one semantic color plus the neutral ladder. Two saturated colors in one viewport means the meaning has stopped being legible.
+**Two accents per section.** Where the old system allowed one saturated UI color per viewport, this one allows two, because the page now has more going on (a photo plus a live product mock, say). Three or more in one viewport still reads as noise.
 
-**The gradient exception.** The wordmark is the only place a gradient appears anywhere on the page. It is dropped in as a fixed asset, never recreated in CSS, and never echoed elsewhere: no button, panel, or heading picks up a gradient fill just because the logo has one.
+**The gradient exception, extended.** The wordmark keeps its gradient as a fixed asset, unrecreated elsewhere in UI chrome. Photographs may carry a dark scrim gradient (canvas to transparent) purely for text legibility over an image — that's a functional overlay, not a decorative gradient, and it's the one other place a gradient is allowed.
 
 ## Typography
 
-**One family: JetBrains Mono**, with system monospace fallbacks. No second face, no serif for contrast. A single mono voice is what makes the page read as authored by engineers rather than assembled from a template, and it earns its place because half the content on the page is time.
+**Two families now.** Poppins for anything a person reads as a sentence: headlines, ledes, body copy, buttons, nav. JetBrains Mono for anything that reads as data: timestamps, room and venue labels inside the product mock, state chips, the schedule axis. If it would make sense on a wristwatch, it's mono. If it would make sense in a conversation, it's Poppins.
 
 ### Hierarchy
 
-- **Display** `clamp(2rem, 5vw, 3.25rem)` / 700 / 1.08 / -0.03em. The hero line, once per page.
-- **Section** `1.375rem` / 600 / 1.25. Section headings.
-- **Lede** `1.0625rem` / 400 / 1.6. The one paragraph under a heading that has to land.
-- **Body** `0.9375rem` / 400 / 1.7. Everything else that is read.
-- **Meta** `0.75rem` / 700 / 0.1em, uppercase. Times, room names, state labels, footer. Never a sentence.
+- **Display** `clamp(2.5rem, 6vw, 4.25rem)` / 700 / 1.05 / -0.02em. Poppins. The hero line, once per page.
+- **Section** `1.75rem` / 700 / 1.2. Poppins. Section headings.
+- **Lede** `1.1875rem` / 500 / 1.55. Poppins. The paragraph under a heading that has to land.
+- **Body** `1rem` / 400 / 1.7. Poppins. Everything else that is read.
+- **Meta** `0.75rem` / 700 / 0.08em, uppercase. JetBrains Mono. Times, room names, state labels, footer. Never a sentence.
 
 ### Named rules
 
 **The legibility floor rule.** Meta size is for data. The moment it forms a clause, promote it to body.
 
-**The measure rule.** Prose stops at 62 characters. Mono is wide, so a line that looks short in a serif is already too long here.
+**The measure rule.** Prose stops at 68 characters, a touch looser than before since Poppins is narrower than mono.
 
-**No caps eyebrows.** Uppercase belongs on data labels inside the interface language, not stacked above every heading as decoration.
+**No caps eyebrows.** Uppercase belongs on data labels inside the product mock, not stacked above every heading as decoration.
+
+## Photography
+
+The single biggest change in this revision. Photos do the emotional work copy used to do alone.
+
+- **Subject.** Real-feeling moments inside the kind of venues UpVibez actually serves: a restaurant mid-service, friends laughing over dinner, a hotel lounge at golden hour, a spa, a dance floor. Warm, candid, a little imperfect — never a stiff corporate handshake photo, never an obviously staged stock-photo smile at the camera.
+- **Treatment.** Full color, no duotone or brand-color wash required. Corners match the panel or control radius depending on size. A photo used as a background behind text always carries a canvas-to-transparent scrim strong enough to hold body-size text at full contrast.
+- **Playlist covers.** Every playlist, album, or track shown anywhere in the product mock gets a real square photo standing in for its cover art, not an icon or a two-letter monogram. This is one of the most concrete ways the page shows the product is about real music in real rooms.
+- **Captions.** Meta type, dim color, brief. A caption names the place or moment, it doesn't sell it — the photo already did that.
 
 ## Layout
 
-A single column, 1120px maximum, left aligned. Centered text is for the hero line only, and even there, left is the safer choice.
+A single column, 1120px maximum, left aligned except the hero, which may center or split against a photo. Sections are separated by 6rem of vertical space. The canvas is continuous; panels and photos are the structure.
 
-Sections are separated by 6rem of vertical space and nothing else. No dividers, no alternating background bands. The canvas is continuous; the panels are the structure.
-
-```
-┌──────────────────────────────────────────────┐
-│  upvibez                          contact    │  56px bar, border-bottom
-├──────────────────────────────────────────────┤
-│                                              │
-│  Schedule music to the minute,               │  display
-│  months ahead, room by room.                 │
-│                                              │
-│  ┌────────────────────────────────────────┐  │
-│  │ 06  09  12  15  18  21  24             │  │  the hero: a live schedule
-│  │ Lobby   ▓▓▓▓▓░░░░▓▓▓▓▓▓▓▓░░░▓▓▓▓        │  │
-│  │ Restaurant  ░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓         │  │
-│  │ Spa     ▓▓▓▓▓▓▓▓░░░░░░░░░░░░            │  │
-│  └────────────────────────────────────────┘  │
-│                                              │
-│  6rem                                        │
-│                                              │
-│  Scheduling                                  │  section + lede + body
-│  ...                                         │
-└──────────────────────────────────────────────┘
-```
-
-The hero schedule is the only element on the page allowed to be visually ambitious. Everything below it is quiet.
+The hero now pairs the display headline with a photo — full-bleed behind it, or side by side, but a photo is present in the hero. The schedule timeline moves to its own moment inside the product section rather than sitting inside the hero.
 
 ## Components
 
 ### The schedule grid
 
-The signature element. A horizontal time axis in meta type, rooms stacked as rows, blocks drawn as `schedule-block` rectangles at `0.2rem` corners. Programmed blocks carry scheduled violet at low fill with a one pixel border; unprogrammed stretches use silent lavender-gray. A single block may show playing blue to indicate now.
-
-Draw it in inline SVG or CSS grid, not as an image, and keep it accurate to the product: minute granularity, rooms independent, a venue default row when no rooms exist.
+Still the signature proof-of-product element: a horizontal time axis in meta type, rooms or a single room's day stacked as rows, blocks drawn as `schedule-block` rectangles. Programmed blocks carry scheduled violet at low fill; unprogrammed stretches use silent lavender-gray; a block may show playing blue to indicate now.
 
 ### Panels
 
-Mask background, one pixel border, `1rem` corners, `1.5rem` padding. Flat. No shadow at rest.
+Mask background, one pixel border, generous corners, comfortable padding. A panel is for content that's genuinely a bounded object — the product mock, a stat, a form. Prose lives directly on the canvas.
 
-Do not chop the page into a grid of identical panels. A panel is for content that is genuinely a bounded object, such as the offline cache state or the compliance record. Prose lives directly on the canvas.
+### Photo cards
+
+A photo in a rounded frame, optionally with a caption below or a scrim and copy on top. Used for the hero, the venue-type strip, and the energy section.
 
 ### Actions
 
-One primary action on the page, violet fill on canvas text. Everything else is a quiet action, transparent with a border. Buttons say what happens. No arrows appended to the label.
+One primary action per page, violet fill, ink-colored text. Everything else is a quiet action, transparent with a border. Buttons say what happens in plain words. Exclamation marks are fine here if the moment earns it — "Get on the list!" is fine; forcing one onto every button is not.
 
 ### State chips
 
-Bordered pills at meta size for things like a room name or a cache status. A chip carries the semantic color of the state it names, or stays muted. Never icon only.
+Bordered pills at meta size for room names, cache status, playback state. Carries the semantic color of the state it names, or stays muted.
 
 ## Motion
 
-State transitions 140 to 200ms. One orchestrated moment on the page, and it belongs to the schedule grid: blocks drawing in across the timeline, once, on load, finishing in under a second.
-
-No scroll triggered fades on every section. No hover lift on cards. `prefers-reduced-motion` renders the schedule in its final state immediately.
+State transitions 140 to 200ms. The schedule grid still draws itself in once on load. `prefers-reduced-motion` renders everything in its final state immediately.
 
 ## Writing
 
-Sentence case. Active voice. No em dashes. No exclamation marks.
+Sentence case. Active voice. No em dashes. Short sentences a general manager can read in ten seconds standing at a host stand.
 
-Describe the mechanism, not the benefit. "Caches a week of music and keeps playing when the connection drops" is the line. "Never miss a beat" is not.
+Speak to the person running the venue, not the software running the schedule. "Set it up once, and the right music plays itself, every room, every day" beats a sentence about blocks and slots. Save the mechanism-level detail (minute-level scheduling, offline caching) for the one section that has to prove it works, and keep it plain and honest there too.
 
-Use the venue's vocabulary: venue, room, zone, schedule, slot, playlist, licence. Avoid platform, solution, seamless, elevate, curate as a verb applied to us.
+Use the venue's vocabulary: venue, room, playlist, guest, shift, day. Avoid platform, solution, seamless, elevate, curate as a verb applied to us, and avoid partner-facing jargon like "licensing enquiry" in favor of "get in touch."
 
-The compliance section is the one that closes partners. Be plain and specific there: what is licensed, who holds the licence, what evidence of playback we produce.
+Exclamation marks are allowed in small doses where the energy is genuine. Don't invent product capability in copy — a friendlier voice is not a license to promise something the product doesn't do.
 
 ## Do and don't
 
 ### Do
 
-- Let the schedule grid be the memorable thing and keep everything else disciplined.
-- Keep every saturated color tied to one of the four product states.
-- Hold prose to 62 characters and body size or larger.
+- Open with a photo that makes someone smile before they've read a word.
+- Give every playlist a real photo cover, everywhere it appears.
+- Keep the schedule grid as proof, once the reader is already interested.
+- Hold prose to 68 characters and body size or larger.
 - Ship visible keyboard focus, a two pixel violet ring at two pixel offset.
-- Check contrast against the canvas, particularly dim text on mask panels.
+- Check contrast against the canvas, and against any scrim over a photo.
 
 ### Don't
 
-- Don't add a fifth accent, a glass panel, or a glow. Don't recreate the wordmark's gradient anywhere else on the page; it stays a fixed asset, and everything else stays flat.
-- Don't build a grid of identical feature cards with the same shadow under each.
-- Don't put a tracked out uppercase eyebrow above every heading.
-- Don't animate sections in as the user scrolls.
-- Don't add pricing, a trial, or a signup funnel. This page opens a conversation with a partner.
+- Don't use a stiff, obviously-staged stock photo. If it looks like a handshake photo from a bank's homepage, pick a different one.
+- Don't put more than two saturated UI colors in one viewport, on top of whatever a photo brings in naturally.
+- Don't add a tracked-out uppercase eyebrow above every heading.
+- Don't recreate the wordmark's gradient as decoration; scrims over photos are the only other sanctioned gradient.
+- Don't add pricing or a hard signup funnel outside the waitlist. This page opens a conversation, it doesn't try to close a sale.
 - Don't invent product capability in copy. If the product cannot do it yet, it does not go on the page.
